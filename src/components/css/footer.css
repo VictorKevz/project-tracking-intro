@@ -1,0 +1,15 @@
+.my-footer{
+    position: absolute;
+    bottom: 1px;
+    text-align: center;
+    font-size: 1.2rem;
+    opacity: .7;
+    font-weight: 300;
+    text-decoration: underline;
+}
+a{
+    text-decoration: none;
+    color: var(--red);
+    font-weight: 500;
+    font-size: 1rem;
+  }

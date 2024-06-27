@@ -1,0 +1,113 @@
+.header-wrapper {
+  width: 100%;
+  position: relative;
+}
+.nav-container {
+  width: 100%;
+  /* background-color: aqua; */
+  padding-right: 11.597%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+}
+.nav-links-container {
+  display: flex;
+  align-items: center;
+  gap: 4.2rem;
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--very-dark-blue);
+  width: fit-content;
+  position: relative;
+  transform: scale(1);
+
+}
+.nav-link:not(:nth-child(4))::after {
+    content: '';
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: width 0.3s ease-in-out;
+
+  }
+  .nav-link:not(:nth-child(4)):not(.login):hover::after {
+    width: 100%;
+    background-color: var(--very-dark-blue);
+
+  }
+  .nav-link.login:hover::after {
+    width: 100%;
+    background-color: var(--grayish-blue);
+    /* margin-left: 0.5rem; */
+
+  }
+  .nav-link:not(.nav-link.dot):hover{
+    transform: scale(1.5);
+
+  }
+.nav-link.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--grayish-blue);
+  opacity: 0.5;
+}
+.nav-link.login {
+  color: var(--grayish-blue);
+  margin-left: 0.5rem;
+  width: fit-content;
+}
+.toggle-container {
+  cursor: pointer;
+  display: none;
+}
+@media (width <= 720px) {
+  .toggle-container {
+    display: flex;
+    position: absolute;
+    right: 11.597%;
+  }
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 3.8rem;
+  }
+  .nav-links-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90.46%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin: 3.8rem auto 0 auto;
+    box-shadow: 0 5px 20px rgb(0, 0, 0, 0.1);
+    padding: 2.5rem;
+    text-align: center;
+    background-color: white;
+    border-radius: 1rem;
+    display: none;
+    height: fit-content;
+    gap: 2.1rem;
+  }
+  
+  .nav-links-container.open{
+    display: flex;
+  }
+  .nav-link.dot {
+    height: 1px;
+    margin:.3rem 0 ;
+    width: 100%;
+  }
+  .nav-link.login {
+    padding-left: 0;
+  }
+}
