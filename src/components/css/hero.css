@@ -5,6 +5,7 @@
   justify-content: space-between;
   /* align-items: center; */
   flex-direction: row-reverse;
+  overflow-x: hidden;
 }
 
 .hero-img {
@@ -94,7 +95,7 @@
   }
   .hero-img{
     margin-right: 0;
-    margin-left: -10.4458%;
+    margin-left: -5%;
     max-width: 153%;
 
   }
